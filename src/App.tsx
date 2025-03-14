@@ -6,17 +6,20 @@ import WorkplaceAmenities from './components/WorkplaceAmenities/WorkplaceAmeniti
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src='/assets/logo.png' className="bhive-logo" alt="Bhive Logo" />
+    <div className='App'>
+      <header className='header'>
+        <img src='/assets/logo.png' className='bhive-logo' alt='Bhive Logo' />
         <div className='phone-wrapper'>
-          <img src='/assets/phone.png' className="phone" alt="phone" />
+          <img src='/assets/phone.png' className='phone' alt='phone' />
         </div>
       </header>
       <Content />
       <WorkplaceAmenities />
       <SpaceOverviewWidget />
       <DownloadApp />
+      <footer className='footer'>
+        © Copyright 2024. Bhive Private Limited
+      </footer>
     </div>
   );
 }
