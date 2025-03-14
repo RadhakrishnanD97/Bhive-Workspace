@@ -1,0 +1,58 @@
+@import '../../styles/variables';
+
+.download-app-wrapper {
+    padding: 4rem 12rem;
+
+    .section-title {
+        color: #605F5F;
+        padding: 2rem;
+    }
+
+    .section-wrapper {
+        display: flex;
+        margin-top: 16rem;
+        height: 26.5rem;
+        border: 1px solid #EEE7E7CC;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 8px 0px #0000000F;
+        border-radius: 18px;
+        padding: 2rem;
+        position: relative;
+
+        .download-phone {
+            width: 40rem;
+            position: absolute;
+            top: -13.5rem;
+        }
+
+        .clearfix {
+            flex: 1;
+        }
+
+        .store {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-self: flex-end;
+
+            .content {
+                font-weight: 500;
+                font-size: 2rem;
+                color: #605F5F;
+            }
+        }
+
+        .store-wrapper {
+            display: flex;
+            margin-top: 4rem;
+
+            img {
+                height: 4.5rem;
+            }
+
+            .google-play {
+                margin-right: 2rem;
+            }
+        }
+    }
+}
