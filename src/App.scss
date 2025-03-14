@@ -12,7 +12,11 @@
   }
 
   .phone-wrapper {
-    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 4.2rem;
+    display: flex;
+    height: 4.2rem;
     border: 1px solid #F2B304;
     border-radius: 4px;
 
