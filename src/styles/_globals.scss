@@ -35,7 +35,55 @@ body {
 //   }
 // }
 
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* Default styles */
+body {
+  font-size: 1.6rem; /* 16px */
+  line-height: 1.5;
+}
+
+/* ✅ Mobile First Approach */
+@media (max-width: 480px) {
+  body {
+    font-size: 1.4rem; /* 14px */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.6rem; /* 16px */
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 1.8rem; /* 18px */
+  }
+}
+
+@media (max-width: 1440px) {
+  body {
+    font-size: 2rem; /* 20px */
+  }
+}
+
+@media (min-width: 1441px) {
+  body {
+    font-size: 2.2rem; /* 22px */
+  }
+}
+
+
 .section-title {
-    font-size: $font-size-heading-2;
-    color: $primary-text-color;
+  font-size: $font-size-heading-2;
+  color: $primary-text-color;
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: $font-size-heading-3;
+  }
 }
