@@ -36,3 +36,19 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 480px) {
+
+  .header {
+    padding: 2rem;
+  }
+
+  .bhive-logo {
+    width: 10rem;
+  }
+
+  .phone-wrapper {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+}
