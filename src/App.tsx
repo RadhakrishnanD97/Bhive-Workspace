@@ -1,5 +1,6 @@
 import './App.scss';
 import Content from './components/Content/Content';
+import WorkplaceAmenities from './components/WorkplaceAmenities/WorkplaceAmenities';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         </div>
       </header>
       <Content />
+      <WorkplaceAmenities />
     </div>
   );
 }
