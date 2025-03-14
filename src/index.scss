@@ -1,7 +1,12 @@
 @import './styles/variables';
 
+html {
+  font-size: 62.5%; // 1rem = 10px (for easier calculations)
+}
+
 body {
   margin: 0;
   font-family: $font-primary;
   color: black;
+  font-size: 1.6rem; // 16px (default paragraph size)
 }
