@@ -1,0 +1,63 @@
+@import '../../styles/variables';
+
+.content {
+    display: flex;
+    height: 30rem;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+
+    .title-wrapper {
+        flex: 2.5;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../../../public/assets/content-background.png');
+            background-size: 125%;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .diagnol-image {
+            position: absolute;
+            top: -6rem;
+            left: 30rem;
+            height: 16rem;
+        }
+
+        .title {
+            font-size: $font-size-heading-1;
+            padding: 5rem 12rem;
+
+            >span {
+                color: $primary-color-2;
+            }
+        }
+    }
+
+    .video-wrapper {
+        flex: 1;
+        position: relative;
+
+        .content-video {
+            width: 35rem;
+            z-index: -1;
+        }
+
+        .diagnol-image {
+            position: absolute;
+            left: 4rem;
+            top: -12rem;
+            width: 100%;
+            z-index: 0;
+        }
+    }
+}

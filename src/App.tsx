@@ -1,16 +1,16 @@
-import logo from './assets/logo.png';
-import phone from './assets/phone.png';
 import './App.scss';
+import Content from './components/Content/Content';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="bhive-logo" alt="Bhive Logo" />
+        <img src='/assets/logo.png' className="bhive-logo" alt="Bhive Logo" />
         <div className='phone-wrapper'>
-          <img src={phone} className="phone" alt="phone" />
+          <img src='/assets/phone.png' className="phone" alt="phone" />
         </div>
       </header>
+      <Content />
     </div>
   );
 }
