@@ -3,6 +3,10 @@
 .workplace-amenities {
     padding: 4rem 12rem;
 
+    .arrow-img-mobile {
+        display: none;
+    }
+
     .amenities-wrapper {
         display: flex;
         flex-wrap: wrap;
@@ -26,4 +30,36 @@
         }
     }
 
+}
+
+@media (max-width: 480px) {
+
+    .workplace-amenities {
+        padding: 3rem 2rem;
+
+        .amenities-wrapper {
+            justify-content: center;
+        }
+
+        .amenities {flex-direction: column;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 15.4rem;
+            padding: 1rem;
+            border-radius: 6px;
+            box-shadow: 0px 2px 4px 0px #0000000F;
+            margin: 0 1rem 1rem 0;
+
+            .image {
+                width: 2.8rem;
+            }
+
+            .text {
+                padding: 0;
+                padding-top: 0.5rem;
+                font-size: 1.4rem;
+                text-align: center;
+            }
+        }
+    }
 }

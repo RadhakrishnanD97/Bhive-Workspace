@@ -51,9 +51,12 @@ function WorkplaceAmenities() {
 
     return (
         <section className="workplace-amenities">
-            <h2 className='section-title'>
-                Why Choose us?
-            </h2>
+            <div className='title-wrapper'>
+                <h2 className='section-title'>
+                    Why Choose us?
+                </h2>
+                <img className='arrow-img-mobile' />
+            </div>
             <div className='amenities-wrapper'>
                 {
                     data?.map((value: AmenitiesI) => amenities(value))
