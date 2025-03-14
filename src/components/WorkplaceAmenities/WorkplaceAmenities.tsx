@@ -51,7 +51,7 @@ function WorkplaceAmenities() {
 
     return (
         <section className="workplace-amenities">
-            <h2 className='title'>
+            <h2 className='section-title'>
                 Why Choose us?
             </h2>
             <div className='amenities-wrapper'>

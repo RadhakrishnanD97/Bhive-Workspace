@@ -1,5 +1,6 @@
 import './App.scss';
 import Content from './components/Content/Content';
+import SpaceOverviewWidget from './components/SpaceOverviewWidget/SpaceOverviewWidget';
 import WorkplaceAmenities from './components/WorkplaceAmenities/WorkplaceAmenities';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       </header>
       <Content />
       <WorkplaceAmenities />
+      <SpaceOverviewWidget />
     </div>
   );
 }

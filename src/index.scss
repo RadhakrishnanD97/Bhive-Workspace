@@ -1,32 +1,3 @@
 @import './styles/variables';
+@import './styles/globals';
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%; // 1rem = 10px (for easier calculations)
-}
-
-body {
-  margin: 0;
-  font-family: $font-primary;
-  color: black;
-  font-size: 1.6rem; // 16px (default paragraph size)
-}
-
-// // Small screens (mobile)
-// @media (max-width: 768px) {
-//   html {
-//     font-size: 14px; // 1rem = 14px (smaller text for small screens)
-//   }
-// }
-
-// // Large screens (desktop)
-// @media (min-width: 1200px) {
-//   html {
-//     font-size: 18px; // 1rem = 18px (bigger text for large screens)
-//   }
-// }
