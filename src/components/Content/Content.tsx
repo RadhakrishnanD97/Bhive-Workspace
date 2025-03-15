@@ -10,7 +10,7 @@ function Content() {
                 </h1>
             </div>
             <div className='video-wrapper'>
-                <video className='content-video' src='/assets/content-video.mp4' autoPlay loop muted />
+                <video className='content-video' src='/assets/content-video.mp4' autoPlay loop muted playsInline/>
                 <img src='/assets/diagnol.png' className='diagnol-image' />
             </div>
             <h1 className='mobile-title'>
