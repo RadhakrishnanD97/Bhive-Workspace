@@ -1,16 +1,33 @@
 
 import './SpaceOverviewWidget.scss';
 import { WorkspaceI } from './models';
-import { apiData } from './api';
+import { useEffect, useState } from 'react';
 
 function SpaceOverviewWidget() {
 
-    function openGoogleMaps(lat: number, lng: number): void {
-        const url = `https://www.google.com/maps?q=${lat},${lng}`;
-        window.open(url, "_blank");
+    const [workspaceList, setWorkspaceList] = useState([]);
+    const apiUrl = process.env.REACT_APP_API_URL;
+
+    useEffect(() => {
+        const URL = `${apiUrl}data.json`
+        fetch(URL)
+            .then(response => response.json())
+            .then(data => setWorkspaceList(data))
+            .catch(error => console.error('Fetch error:', error));
+
+    }, []);
+
+    function openGoogleMaps(url: string | undefined, lat: number, lng: number): void {
+        let modifiedURL;
+        if (url) {
+            modifiedURL = url;
+        } else {
+            modifiedURL = `https://www.google.com/maps?q=${lat},${lng}`;
+        }
+        window.open(modifiedURL, "_blank")
     }
 
-    const handleAddress = (address: string) => {
+    const handleName = (address: string) => {
         if (address.length > 40) {
             return `${address.slice(0, 40)}...`;
         }
@@ -36,8 +53,8 @@ function SpaceOverviewWidget() {
     const workspace = (value: WorkspaceI) => (
         <div className='workspace' key={value.id}>
             <div className='address-section'>
-                <p className='address' title={value.address}>{handleAddress(value.address)}</p>
-                <div className='kilometer-wrapper' onClick={() => openGoogleMaps(value.latitude, value.longitude)}>
+                <p className='address' title={value.name}>{handleName(value.name)}</p>
+                <div className='kilometer-wrapper' onClick={() => openGoogleMaps(value.google_maps_url, value.latitude, value.longitude)}>
                     <img className='image' src='/assets/direction.png' />
                     <p className='kilometer'>6 Kms</p>
                 </div>
@@ -48,7 +65,7 @@ function SpaceOverviewWidget() {
                     <img className='tag-image' src='/assets/tag.png' />
                     <span className='tag-name'>Workspace</span>
                 </div>
-                <img src={value.images[0]} />
+                <img src={`${apiUrl}${value.images[0]}`} />
             </div>
 
             <div className='pass-details-wrapper'>
@@ -78,7 +95,7 @@ function SpaceOverviewWidget() {
             </h2>
             <div className='widget-wrapper'>
                 {
-                    apiData?.map((value: WorkspaceI) => workspace(value))
+                    workspaceList?.map((value: WorkspaceI) => workspace(value))
                 }
             </div>
         </section>
