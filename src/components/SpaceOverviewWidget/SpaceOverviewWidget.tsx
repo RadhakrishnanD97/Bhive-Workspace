@@ -2,20 +2,21 @@
 import './SpaceOverviewWidget.scss';
 import { WorkspaceI } from './models';
 import { useEffect, useState } from 'react';
+import { fetchWorkspaces, selectWorkspaces } from "../../redux/workspaceSlice";
+import { AppDispatch } from "../../redux/store";
+import { useDispatch, useSelector } from 'react-redux';
 
 function SpaceOverviewWidget() {
 
-    const [workspaceList, setWorkspaceList] = useState([]);
     const apiUrl = process.env.REACT_APP_API_URL;
+    const dispatch = useDispatch<AppDispatch>();
+    const { data, status, error } = useSelector(selectWorkspaces);
 
     useEffect(() => {
-        const URL = `${apiUrl}data.json`
-        fetch(URL)
-            .then(response => response.json())
-            .then(data => setWorkspaceList(data))
-            .catch(error => console.error('Fetch error:', error));
-
-    }, []);
+        if (status === "idle") {
+            dispatch(fetchWorkspaces());
+        }
+    }, [status, dispatch]);
 
     function openGoogleMaps(url: string | undefined, lat: number, lng: number): void {
         let modifiedURL;
@@ -95,7 +96,7 @@ function SpaceOverviewWidget() {
             </h2>
             <div className='widget-wrapper'>
                 {
-                    workspaceList?.map((value: WorkspaceI) => workspace(value))
+                    data?.map((value: WorkspaceI) => workspace(value))
                 }
             </div>
         </section>
