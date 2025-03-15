@@ -8,6 +8,12 @@
         flex-wrap: wrap;
     }
 
+    .title-wrapper {
+        .mobile-arrow-navigation {
+            display: none;
+        }
+    }
+
     .workspace {
         width: 37rem;
         margin-right: 3rem;
@@ -172,6 +178,16 @@
 
         .widget-wrapper {
             justify-content: center;
+        }
+
+        .title-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .mobile-arrow-navigation {
+                display: block;
+            }
         }
 
         .workspace {

@@ -3,6 +3,12 @@
 .workplace-amenities {
     padding: 4rem 12rem;
 
+    .title-wrapper {
+        .mobile-arrow-navigation {
+            display: none;
+        }
+    }
+
     .arrow-img-mobile {
         display: none;
     }
@@ -36,6 +42,16 @@
 
     .workplace-amenities {
         padding: 3rem 2rem;
+
+        .title-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .mobile-arrow-navigation {
+                display: block;
+            }
+        }
 
         .amenities-wrapper {
             justify-content: center;

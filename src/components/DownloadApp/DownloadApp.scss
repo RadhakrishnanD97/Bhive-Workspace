@@ -3,6 +3,12 @@
 .download-app-wrapper {
     padding: 4rem 12rem;
 
+    .title-wrapper {
+        .mobile-arrow-navigation {
+            display: none;
+        }
+    }
+
     .section-title {
         color: #605F5F;
         padding: 2rem;
@@ -61,6 +67,16 @@
 
     .download-app-wrapper {
         padding: 3rem 2rem;
+
+        .title-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .mobile-arrow-navigation {
+                display: block;
+            }
+        }
 
         .section-title {
             font-size: $font-size-heading-3;
