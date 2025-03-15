@@ -290,7 +290,7 @@
 
 }
 
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
 
     .space-overview-widget {
         padding: 3rem 6rem;

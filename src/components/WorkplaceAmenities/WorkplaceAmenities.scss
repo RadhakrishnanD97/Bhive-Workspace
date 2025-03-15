@@ -80,7 +80,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
 
     .workplace-amenities {
         padding: 3rem 6rem;
