@@ -63,7 +63,46 @@
     }
 }
 
-@media (max-width: 480px) {
+
+@media (max-width: 1024px) {
+    .download-app-wrapper {
+        padding: 3rem 9rem;
+    
+        .section-wrapper {
+            margin-top: 12rem;
+            height: 20rem;
+    
+            .download-phone {
+                width: 30rem;
+                top: -10.5rem;
+            }
+
+            .clearfix {
+                flex: 1.2;
+            }
+    
+            .store {
+                .content {
+                    font-size: 1.5rem;
+                }
+            }
+    
+            .store-wrapper {
+                margin-top: 3rem;
+    
+                img {
+                    height: 3.5rem;
+                }
+    
+                .google-play {
+                    margin-right: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px), (max-width: 768px) {
 
     .download-app-wrapper {
         padding: 3rem 2rem;

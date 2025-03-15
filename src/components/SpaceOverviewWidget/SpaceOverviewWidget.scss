@@ -289,3 +289,19 @@
     }
 
 }
+
+@media (max-width: 768px) {
+
+    .space-overview-widget {
+        padding: 3rem 6rem;
+
+        .widget-wrapper {
+            justify-content: center;
+        }
+
+        .workspace {
+            margin-right: 0;
+        }
+    }
+
+}

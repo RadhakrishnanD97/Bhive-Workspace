@@ -57,7 +57,7 @@
             justify-content: center;
         }
 
-        .amenities {flex-direction: column;
+        .amenities {
             flex-direction: column;
             justify-content: space-between;
             width: 15.4rem;
@@ -78,4 +78,16 @@
             }
         }
     }
+}
+
+@media (max-width: 768px) {
+
+    .workplace-amenities {
+        padding: 3rem 6rem;
+
+        .amenities-wrapper, .amenities {
+            justify-content: center;
+        }
+    }
+
 }
