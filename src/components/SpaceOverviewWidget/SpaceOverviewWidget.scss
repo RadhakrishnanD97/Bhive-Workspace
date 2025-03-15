@@ -8,6 +8,14 @@
         flex-wrap: wrap;
     }
 
+    .loading {
+        width: 100%;
+        padding-top: 7rem;
+        text-align: center;
+        font-size: 2rem;
+        color: $primary-text-color;
+    }
+
     .title-wrapper {
         .mobile-arrow-navigation {
             display: none;
@@ -198,19 +206,19 @@
         .address-section {
             display: flex;
             height: 4.4rem;
-    
+
             .address {
                 font-size: 1.8rem;
             }
-    
+
             .kilometer-wrapper {
                 min-width: 4.4rem;
                 height: 4.4rem;
-    
+
                 .image {
                     width: 1.4rem;
                 }
-    
+
                 .kilometer {
                     font-size: 7px;
                     padding-top: 0.5rem;
@@ -220,7 +228,7 @@
 
         .workspace-image {
             padding: 1.5rem 0;
-    
+
             .tag {
                 left: 0.5rem;
                 top: 2rem;
@@ -230,12 +238,12 @@
                 border: 0.47px solid #FFBB0080;
                 box-shadow: 0px 1.87px 5.6px 0px #00000014;
 
-    
+
                 .tag-image {
                     width: 1.12rem;
                     height: 100%;
                 }
-    
+
                 .tag-name {
                     padding-left: 0.5rem;
                     font-size: 1.2rem;
@@ -250,6 +258,7 @@
         }
 
         .pass-details-wrapper {
+
             .day-pass,
             .bulk-pass {
                 width: 14.2rem;
@@ -258,11 +267,11 @@
                 .title {
                     font-size: 1.2rem;
                 }
-    
+
                 .price {
                     padding-top: 0.8rem;
                     font-size: 1.8rem;
-    
+
                     >span {
                         font-size: 1.1rem;
                     }
@@ -278,5 +287,5 @@
             }
         }
     }
-    
+
 }

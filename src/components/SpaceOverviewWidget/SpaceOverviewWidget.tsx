@@ -103,6 +103,10 @@ function SpaceOverviewWidget() {
                 {
                     data?.map((value: WorkspaceI) => workspace(value))
                 }
+                {
+                    status === 'loading' &&
+                    <p className='loading'>Loading...</p>
+                }
             </div>
         </section>
     );
